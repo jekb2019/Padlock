@@ -3,8 +3,14 @@
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    margin-bottom: 30px;
     height: 450px;
     justify-content: center;
+    box-shadow:
+    7px 7px 16px 0 rgba(0, 0, 0, 0.25),
+    -7px -7px 16px 0 rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    padding: 20px;
 }
 
 .shank,
@@ -15,7 +21,7 @@
 
 .shank {
     z-index: 0;
-    /* transform: translateY(35px); */
+    transform: translateY(35px);
     width: 270px;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;

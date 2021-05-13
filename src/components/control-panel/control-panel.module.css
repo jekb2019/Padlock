@@ -1,0 +1,25 @@
+.panel {
+    display: flex;
+    width: 250px;
+    justify-content: space-around;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 25px;
+    background-color: #d3d3d3;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: #757575;
+    box-shadow:
+    5px 5px 15px 0 rgba(0, 0, 0, 0.25),
+    -5px -5px 15px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn:active {
+    box-shadow:
+      5px 5px 10px 0 rgba(0, 0, 0, 0.3) inset,
+      -5px -5px 12px 0 rgba(255, 255, 255, 0.25) inset;
+  }
+  

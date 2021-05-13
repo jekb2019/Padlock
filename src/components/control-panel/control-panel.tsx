@@ -2,7 +2,10 @@ import React from 'react';
 import styles from './control-panel.module.css';
 
 const ControlPanel = () => (
-        <h1>Control Panel</h1>
+        <div className={styles.panel}>
+            <button className={styles.btn}>Unlock</button>
+            <button className={styles.btn}><i className="fas fa-cog"></i></button>
+        </div>
     );
 
 export default ControlPanel;
