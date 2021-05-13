@@ -12,7 +12,7 @@ const ControlPanel = (props: PadlockProps) => {
 
     // Show Hint for password
     const showHint = () => {
-        window.alert("Password is #123");
+        window.alert("Passcode is #123");
     }
     
     return (
