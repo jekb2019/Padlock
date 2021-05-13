@@ -1,6 +1,7 @@
 export class LockService {
     private isLocked: boolean = true;
-    
+    private currentPasscode: string = '000';
+
     constructor(private passcode: string) {}
 
     lock() {
@@ -24,5 +25,12 @@ export class LockService {
     get getIsLocked() {
         return this.isLocked;
     }
+
+    get getCurrentPasscode() {
+        return this.currentPasscode;
+    }
     
+    set setCurrentPasscode(passcode: string) {
+        this.currentPasscode = passcode;
+    }
 }

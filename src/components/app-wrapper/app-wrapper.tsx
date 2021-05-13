@@ -14,10 +14,11 @@ const AppWrapper = (props:ServiceProps) => {
     const [isLocked, setIsLocked] = useState<boolean>(props.service!.getIsLocked);
     console.log(isLocked);
     
+    
 
     return(
         <div className={styles.wrapper}>
-            <Padlock isLocked ={isLocked}/>
+            <Padlock isLocked ={isLocked} service={props.service}/>
             <ControlPanel/>
         </div>
     );
