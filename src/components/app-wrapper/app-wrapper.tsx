@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { LockService } from '../../service/lockService';
 import ControlPanel from '../control-panel/control-panel';
 import Padlock from '../padlock/padlock';
@@ -14,37 +14,34 @@ const AppWrapper = (props:ServiceProps) => {
     const [isLocked, setIsLocked] = useState<boolean>(props.service!.getIsLocked);
     const [currentPasscode, setCurrentPasscode] = useState<string>(props.service?.getCurrentPasscode!);
     
-    console.log(currentPasscode);
-    
 
-    // Unlock padlock
+    // Lock/Unlock Padlock by changing component state
     const unlockPadlock = () => {
         if(isLocked) {
             const status = unlockPadlockFromService(currentPasscode);
             if(status) {
                 setIsLocked(false);
-                console.log("Wrapper: padlock unlocked");
-            } else {
-                console.log("Wrapper: padlock unlock failed");
-                
             }
         } else {
             setIsLocked(true);
-            console.log("padlock locked");
+            lockPadlockFromService();
         }
     }
 
+    // Change the "isLocked" state inside the service instance to "locked"
     const unlockPadlockFromService = (passcode: string) => {
         return props.service!.unlock(passcode);
     }
 
-    const updateCurrentPasscode = (passcode: string) => {
-        console.log("current passcode: " + passcode);
-        setCurrentPasscode(passcode);
-        
+    // Change the "isLocked" state inside the service instance to "unlocked"
+    const lockPadlockFromService = () => {
+        props.service!.lock();
     }
 
-    
+    // Update currentPasscode state
+    const updateCurrentPasscode = (passcode: string) => {
+        setCurrentPasscode(passcode);        
+    }
 
     return(
         <div className={styles.wrapper}>

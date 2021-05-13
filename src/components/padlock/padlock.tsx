@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { LockService } from '../../service/lockService';
 import NumberPad from '../number-pad/number-pad';
 import styles from './padlock.module.css';
@@ -11,24 +11,26 @@ interface PadlockProps {
 
 const Padlock = (props: PadlockProps) => {
 
+    // shank UI Ref
     const shankRef = useRef<HTMLDivElement>(null);
 
+    // shank style
+    const shankLockedStyle = 'translateY(35px)';
+    const shankUnlockedStyle = 'translateY(0px)';
+
+    // toggle shank UI whenever the padlock is locked/unlocked
     useEffect(() => {
-        console.log("Padlock: islocked changed!!" + props.isLocked);
         toggleShankUI();
-        
     }, [props.isLocked])
 
-    const toggleShankUI = () => {
-        console.log("ui updater");
-        
+
+    // update shank UI
+    const toggleShankUI = () => {        
         if(shankRef.current != null)  {
             if(props.isLocked) {
-                shankRef.current.style.transform = "translateY(35px)";
-                
-
+                shankRef.current.style.transform = shankLockedStyle;
             } else {
-                shankRef.current.style.transform = "translateY(0px)";
+                shankRef.current.style.transform = shankUnlockedStyle;
             }
         }
     }

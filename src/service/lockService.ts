@@ -1,9 +1,14 @@
+/**
+ * LockService Class is the service class for this project
+ */
+
 export class LockService {
     private isLocked: boolean = true;
-    private currentPasscode: string = '000';
+    private currentPasscode: string = '000'; // default current passcode
 
     constructor(private passcode: string) {}
 
+    // Lock padlock
     lock() {
         this.isLocked = true;
     }
@@ -15,19 +20,16 @@ export class LockService {
      */
 
     unlock(passcode: string):boolean {
-        // console.log("unlock called");
-        
         if(passcode === this.passcode) {
-            console.log("unlocked");
-            
             this.isLocked = false;
             return true;
         }
-        console.log("failed to unlock");
         
         return false;
     }
 
+
+    // Getters and Setters
     get getIsLocked() {
         return this.isLocked;
     }

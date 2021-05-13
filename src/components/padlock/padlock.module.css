@@ -21,7 +21,6 @@
 
 .shank {
     z-index: 0;
-    /* transform: translateY(35px); */
     width: 270px;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
