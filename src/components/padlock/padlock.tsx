@@ -4,7 +4,12 @@ import styles from './padlock.module.css';
 const Padlock = () => {
     return(
         <div className={styles.padlock}>
-            <h1>Padlock</h1>
+            <div className={styles.shank}>
+
+            </div>
+            <div className={styles.body}>
+                
+            </div>
         </div>
     )
 }
