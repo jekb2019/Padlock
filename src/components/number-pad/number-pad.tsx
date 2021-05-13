@@ -5,6 +5,7 @@ import styles from './number-pad.module.css';
 interface PadlockProps {
     isLocked: (boolean | null);
     service: (LockService | null);
+    updateCurrentPasscode(passcode: string): void;
 }
 
 const NumberPad = (props: PadlockProps) => {
@@ -17,13 +18,19 @@ const NumberPad = (props: PadlockProps) => {
 
     const updateCurrentPasscode = () => {
         // get current pass code
+
+
+
+        const code: string = firstDigitRef.current?.value! + secondDigitRef.current?.value! + thridDigitRef.current?.value!;
+        props.updateCurrentPasscode(code);
     }
+    
 
     return(
         <div className={styles.pad}>
-            <input ref={firstDigitRef} className={styles.num} placeholder="0" min={0} max={9} type="number" />
-            <input ref={secondDigitRef} className={styles.num} placeholder="0" min={0} max={9} type="number" />
-            <input ref={thridDigitRef} className={styles.num} placeholder="0" min={0} max={9} type="number" />
+            <input ref={firstDigitRef} onChange={updateCurrentPasscode} className={styles.num} defaultValue='0' placeholder="0" min={0} max={9} type="number" />
+            <input ref={secondDigitRef} onChange={updateCurrentPasscode} className={styles.num} defaultValue='0' placeholder="0" min={0} max={9} type="number" />
+            <input ref={thridDigitRef} onChange={updateCurrentPasscode} className={styles.num} defaultValue='0' placeholder="0" min={0} max={9} type="number" />
         </div>
     );
 }

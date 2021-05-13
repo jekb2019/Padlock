@@ -1,7 +1,14 @@
 import React from 'react';
+import { LockService } from '../../service/lockService';
 import styles from './control-panel.module.css';
 
-const ControlPanel = () => {
+interface PadlockProps {
+    service: (LockService | null);
+    unlock(): void;
+    isLocked: boolean;
+}
+
+const ControlPanel = (props: PadlockProps) => {
 
     // Show Hint for password
     const showHint = () => {
@@ -10,7 +17,9 @@ const ControlPanel = () => {
     
     return (
         <div className={styles.panel}>
-            <button className={styles.btn}>Unlock</button>
+            <button onClick={() => {props.unlock()}} className={styles.btn}>{
+                props.isLocked ? 'Unlock' : 'Lock'
+            }</button>
             <button onClick={showHint} className={styles.btn}><i className="far fa-question-circle"></i></button>
         </div>
     );

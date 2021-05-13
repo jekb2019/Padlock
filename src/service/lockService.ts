@@ -15,10 +15,16 @@ export class LockService {
      */
 
     unlock(passcode: string):boolean {
+        // console.log("unlock called");
+        
         if(passcode === this.passcode) {
+            console.log("unlocked");
+            
             this.isLocked = false;
             return true;
         }
+        console.log("failed to unlock");
+        
         return false;
     }
 
