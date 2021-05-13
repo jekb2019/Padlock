@@ -16,7 +16,7 @@ const ControlPanel = (props: PadlockProps) => {
     
     return (
         <div className={styles.panel}>
-            <button onClick={() => {props.unlock()}} className={styles.btn}>
+            <button onClick={() => {props.unlock()}} className={`${styles.btn} ${styles.controller}`}>
                 { props.isLocked ? 'Unlock' : 'Lock'}
             </button>
             <button onClick={showHint} className={styles.btn}><i className="far fa-question-circle"></i></button>

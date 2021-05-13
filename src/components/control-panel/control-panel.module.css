@@ -4,6 +4,10 @@
     justify-content: space-around;
 }
 
+.controller {
+    width: 150px;
+}
+
 .btn {
     cursor: pointer;
     font-size: 25px;
