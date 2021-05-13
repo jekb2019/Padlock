@@ -1,4 +1,5 @@
 import React from 'react';
+import NumberPad from '../number-pad/number-pad';
 import styles from './padlock.module.css';
 
 const Padlock = () => {
@@ -8,7 +9,7 @@ const Padlock = () => {
 
             </div>
             <div className={styles.body}>
-                
+                <NumberPad/>
             </div>
         </div>
     )
