@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Padlock/static/css/main.ae626a9e.chunk.css",
+    "main.js": "/Padlock/static/js/main.f4dd7799.chunk.js",
+    "main.js.map": "/Padlock/static/js/main.f4dd7799.chunk.js.map",
+    "runtime-main.js": "/Padlock/static/js/runtime-main.40dd45cb.js",
+    "runtime-main.js.map": "/Padlock/static/js/runtime-main.40dd45cb.js.map",
+    "static/js/2.8868223c.chunk.js": "/Padlock/static/js/2.8868223c.chunk.js",
+    "static/js/2.8868223c.chunk.js.map": "/Padlock/static/js/2.8868223c.chunk.js.map",
+    "static/js/3.02b3004d.chunk.js": "/Padlock/static/js/3.02b3004d.chunk.js",
+    "static/js/3.02b3004d.chunk.js.map": "/Padlock/static/js/3.02b3004d.chunk.js.map",
+    "index.html": "/Padlock/index.html",
+    "static/css/main.ae626a9e.chunk.css.map": "/Padlock/static/css/main.ae626a9e.chunk.css.map",
+    "static/js/2.8868223c.chunk.js.LICENSE.txt": "/Padlock/static/js/2.8868223c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40dd45cb.js",
+    "static/js/2.8868223c.chunk.js",
+    "static/css/main.ae626a9e.chunk.css",
+    "static/js/main.f4dd7799.chunk.js"
+  ]
+}
