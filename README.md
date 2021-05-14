@@ -9,6 +9,10 @@ Digital Padlock is created to mimic real life padlock inside the web browser. Th
 
 # 🙌 Getting Started
 
+Simply click [here](https://jekb2019.github.io/Padlock/) to visit deployed website.
+
+URL: https://jekb2019.github.io/Padlock/
+
 # 🎨 Design
 Digital Padlock is inspired by Neumorphic Design which has been a popular design trend since early 2020. Neumorphism is a minimalise desian that distinguishes different objects by lightening up exposed surfaces and addling shadows to them. 
 <p align="center">
@@ -26,6 +30,7 @@ The default passcode is set to "123". It is not yet able to customize the passco
 * React.js
 * TypeScript
 * Post CSS
+* Github Pages - Deployment
 
 # ✍️ Author
 Jason Ko
